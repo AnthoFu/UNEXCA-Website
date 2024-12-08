@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+body {
+    background-color: #022873;
+}
+
 header{
     position: fixed;
     width: 100%;
@@ -77,4 +81,69 @@ header .icon-header{
 header .icon-header img{
     width: 50px;
     filter: brightness(0) invert(1);
+}
+
+/* Aqui termina el header */
+
+
+/* Aqui empieza el main */
+#banner{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+/* Aqui termina el main */
+
+/* Aqui empieza el footer */
+
+footer .footer{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #022873;
+    padding: 0px 20px;
+    width: 100%;
+    align-items: center
+}
+
+footer .icons{
+    padding: 20px 20px;
+    text-align: center;
+    align-content: center;
+    line-height: 60px;
+    min-height: 40px;
+}
+
+footer .information{
+    position: relative;
+    padding: 25px 40px;
+    text-align: left;
+    line-height: 25px;
+    font-size: 16px;
+    flex-shrink: 5;
+    
+}
+
+footer .information a{
+    color: white;
+}
+
+footer .direction{
+    position: relative;
+    flex: 1;
+    padding: 25px;
+    text-align: left;
+    margin-right: 15%;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+
+footer .copy{
+    align-self: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 1%;
+    margin-top: 0;
 }

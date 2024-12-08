@@ -16,7 +16,6 @@ body{
     text-align: center;
     align-content: center;
     line-height: 60px;
-    max-height: 100px;
     min-height: 40px;
 }
 .information{
@@ -46,15 +45,16 @@ body{
     margin-bottom: 1%;
     margin-top: 0;
 }
+
 /*
 @media screen and (min-width: 601px) {
     div.information {
-      font-size: 16px;
+    font-size: 16px;
     }
-  }
-  
-  @media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 600px) {
     div.information {
-      font-size: 60px; }
-       }
+    font-size: 60px; }
+    }
 */
