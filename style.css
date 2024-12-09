@@ -6,11 +6,12 @@
     font-family: 'roboto', sans-serif;
 }
 
-body {
+/* body {
     background-color: #022873;
-}
+} */
 
 header{
+    z-index: 1;
     position: fixed;
     width: 100%;
     max-height: 1080px;
@@ -92,7 +93,54 @@ header .icon-header img{
     width: 100%;
     height: 100vh;
     background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    align-content: center;
+    animation: banner 10s infinite linear alternate;
+    position: relative;
+    background-size: 100% 100%;
+    z-index: -2;
 }
+
+.banner-tittle{
+    color: white;
+}
+
+.banner-tittle h1 {
+    font-size: 100px;
+}
+
+
+#banner-button-section{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    margin-top: -100px;
+}
+
+.banner-button{
+    width: 100%;
+    place-self: center;
+}
+
+.banner-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.banner-button-img {
+    position: absolute;
+    rotate: 180deg;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
 
 /* Aqui termina el main */
 
@@ -105,7 +153,8 @@ footer .footer{
     background-color: #022873;
     padding: 0px 20px;
     width: 100%;
-    align-items: center
+    align-items: center;
+    justify-content: center;
 }
 
 footer .icons{
@@ -130,15 +179,6 @@ footer .information a{
     color: white;
 }
 
-footer .direction{
-    position: relative;
-    flex: 1;
-    padding: 25px;
-    text-align: left;
-    margin-right: 15%;
-    line-height: 30px;
-    font-size: 16px;
-}
 
 
 footer .copy{
@@ -150,3 +190,19 @@ footer .copy{
 }
 
 /* Aqui termina el footer */
+
+
+@keyframes banner {
+    0%, 20% {
+        background-image: url("/assets/banner/banner_altagracia.png");
+    }
+    25%, 45% {
+        background-image: url("/assets/banner/banner_floresta.png");
+    }
+    50%, 70% {
+        background-image: url("/assets/banner/banner_urbina.png");
+    }
+    75%, 100% {
+        background-image: url("/assets/banner/banner_guaira.jpg");
+    }
+}
