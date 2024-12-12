@@ -1,159 +1,158 @@
-/*CSS general (por el momento)*/
+/* CSS general (por el momento) */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+:root {
+    --azul: #022873;
+    --blanco: #fff;
+    --negro: #000;
+    --gris: #343233;
+}
+
+* {
     margin: 0;
     padding: 0;
-    font-family: 'roboto', sans-serif;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif; /*Jost es la otra tipografia*/
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
-    background-color: #022873;
+    min-height: 100vh;
+    background: var(--blanco);
 }
 
-header{
-    z-index: 1;
+/*MENU(UTILIZAR ESTA PARTE PARA TODAS LAS PAGINAS*/
+header {
+    display: flex;
+    justify-content: center;
+    background: url('assets/fondo-header.png') repeat-x;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.3));
     position: fixed;
     width: 100%;
-    max-height: 1080px;
-    background-color: #022873;
+    height: 115px;
+    z-index: 9999;
 }
 
-header .imagen-fondo{
-    position: absolute;
-    top: 50px;
-    /* rotate: 180deg; */
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    z-index: -1;
-}
-
-header .imagen-fondo img{
-    width: 100%;
-}
-
-header .menu {
-    display: flex; 
-    justify-content: space-around;
-    max-width: 1080px;
-    width: 100%;
-    margin: auto;
-    max-height: 100px;
-}
-
-header .img-header{
-    width: 100px;
-    height: 100px;
-}
-
-header .img-header #logo-header{
-    width: 100px;
-    height: 100px;
-    filter: brightness(0) invert(1);
-}
-
-header .links-header{
+.menu {
     display: flex;
-    list-style: none;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    height: 60px;
+    width: 1366px;
+    padding: 0 68px;
 }
 
-header .links-header a{
-    text-decoration: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
+.menu ul {
+    display: flex;
+    list-style-type: none;
+    height: 60px;
+    width: 724px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
 }
 
-header .links-button{
-    width: 150px;
-    height: 75px;
-    background-color: #022873;
-    border-radius: 20px;
-    border: 2px solid white;
-    transition: 1s;
+.menu li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 160px;
+    background: var(--azul);
+    text-align: center;
+    overflow: hidden;
 }
 
-header .links-button:hover{
-    background: white;
-}
-
-header .links-button a:hover{
-    color: #011c52;
-}
-
-header .icon-header{
-    width: 50px;
-    align-self: center;
-}
-
-header .icon-header img{
-    width: 50px;
-    filter: brightness(0) invert(1);
-}
-
-/* Aqui termina el header */
-
-
-/* Aqui empieza el main */
-#banner{
+.menu li::before {
+    content: "";
+    position: absolute;
     width: 100%;
+    height: 7px;
+    top: -60px;
+    left: 0;
+    background-color: var(--blanco);
+    opacity: 0;
+    transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+.menu li:hover::before {
+    top: 0;
+    opacity: 1;
+}
+
+.menu nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--blanco);
+}
+
+.logo-imagen,
+.usuario-logo {
+    height: 60px;
+    padding: 7px 0 0 0;
+}
+
+/*BANNER*/
+#banner {
     height: 100vh;
-    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     text-align: center;
-    align-content: center;
     animation: banner 10s infinite linear alternate;
     position: relative;
     background-size: 100% 100%;
-    z-index: -2;
 }
 
-.banner-tittle{
-    color: white;
-}
-
-.banner-tittle h1 {
-    font-size: 100px;
-}
-
-
-#banner-button-section{
-    display: flex;
-    width: 100%;
-    text-align: center;
-    height: 100px;
-    margin-top: -100px;
-}
-
-.banner-button{
-    margin-top: 50px;
-    font-size: 30px;
-    width: 100%;
-    place-self: center;
-}
-
-.banner-button a {
-    text-decoration: none;
-    color: white;
-}
-
-.banner-button-img {
+.unexca{
+    font-size: 96px;
+    font-family: Jost, sans-serif;
     position: absolute;
-    rotate: 180deg;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+    color:var(--blanco);
+}
+.unexca_boton{
+    background: url('assets/fondo-header2.png') repeat-x;
+    height: 60px;
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    z-index: -1;
+    position: absolute;
+    bottom: 0;
+}
+.unexca_boton a{
+    display: block;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: var(--blanco);
+    padding: 30px;
+}
+/* Aqui termina el header */
+/*PROPIEDADES DEL MAIN Y VAINAS DE ESAS*/
+main {
+    position: relative;
+    background-color: red;
+    z-index: 0;
+    transition: transform 0.3s ease;
+    padding: 0 68px; /*Este es el marge de todos los contenidos*/ 
+    scroll-margin-top: 70px;
 }
 
-.banner-button-img img {
-    width: 100%;
+.unexca_boton:hover + main {
+    transform: translateY(-50px);
 }
 
+
+/*Historia breve*/
 
 .info-inicio{
     display: grid;
@@ -163,15 +162,15 @@ header .icon-header img{
 }
 
 .info-inicio-tittle{
-    margin-top: 50px;
-    font-size: 50px;
-    color: #011c52;
+    padding-top: 40px;
+    font-size: 48px;
+    font-weight: bold;
 }
 
-.info-inicio-text{
+.info-inicio-text p{
     text-align: justify;
-    font-size: 35px;
-    margin: 0px 100px 0px 100px;
+    font-size: 36px;
+    font-weight: light;
 }
 
 .info-inicio-button {
@@ -180,7 +179,7 @@ header .icon-header img{
 
 .info-inicio-button a { 
     text-decoration: none;
-    color: white;
+    color: var(--blanco);
 }
 
 .info-inicio-button button {
@@ -238,9 +237,6 @@ header .icon-header img{
     margin: 0px 0px 50px 0px;
 }
 
-
-/* Aqui termina el main */
-
 /* Aqui empieza el footer */
 
 footer{
@@ -297,15 +293,15 @@ footer .copy{
 
 @keyframes banner {
     0%, 20% {
-        background-image: url("/assets/banner/banner_altagracia.png");
+        background-image: url("assets/banner/banner_altagracia.jpg");
     }
     25%, 45% {
-        background-image: url("/assets/banner/banner_floresta.png");
+        background-image: url("assets/banner/banner_floresta.jpg");
     }
     50%, 70% {
-        background-image: url("/assets/banner/banner_urbina.png");
+        background-image: url("assets/banner/banner_urbina.jpg");
     }
     75%, 100% {
-        background-image: url("/assets/banner/banner_guaira.jpg");
+        background-image: url("assets/banner/banner_guaira.jpg");
     }
 }
