@@ -1,7 +1,7 @@
 <!--Archivo prototipo de parte de Anthony del HTML de la UNEXCA WEBSITE-->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ES">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,50 +11,21 @@
 <body>
     
     <header>
-        <div class="imagen-fondo">
-            <img src="/assets/fondo-header.png">
-        </div>
+        <section class="menu">
+            <a class="logo_menu" href="index.html">
+                <img src="assets/resources/Logo_Unexca_blanco.png" alt="Logo UNEXCA" class="logo-imagen">
+            </a>
+            <nav class="menu_nav">
+                <ul class="menu_nav_lista">
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="">Oferta Academica</a></li>
+                    <li><a href="">Acerca de la Universidad</a></li>
+                    <li><a href="">Historia</a></li>
+                </ul>
+            </nav>
+            <div class="usuario"><img src="assets/avatar.svg" class="usuario-logo"></div>
+        </section>
 
-        <div class="menu">
-            <div class="img-header">
-                <img src="/assets/vector_logo_unexca.svg" alt="Logo UNEXCA" id="logo-header">
-            </div>
-            <ul class="links-header">
-                <li>
-                    <button class="links-button">
-                        <a href="#">
-                            Noticias
-                        </a>
-                    </button>
-                </li>
-                <li>
-                    <button class="links-button">
-                        <a href="#">
-                            Programas academicos
-                        </a>
-                    </button>
-                </li>
-                <li>
-                    <button class="links-button">
-                        <a href="#">
-                            Acerca de la universidad
-                        </a>
-                    </button>
-                </li>
-                <li>
-                    <button class="links-button">
-                        <a href="#">
-                            Historia
-                        </a>
-                    </button>
-                </li>
-            </ul>
-
-            <div class="icon-header">
-                <img src="/assets/avatar.svg" alt="">
-            </div>
-
-        </div>
     </header>
 
     <section id="banner">
@@ -67,7 +38,7 @@
 
     <section id="banner-button-section">
         <div class="banner-button-img">
-            <img src="/assets/fondo-header.png" alt="">
+            <img src="assets/fondo-header.png" alt="">
         </div>
         <div class="banner-button">
             <a href=""> 
@@ -98,26 +69,26 @@
 
         <div class="info-noticias-card-container">
             <div class="inicio-noticias-card">
-                <img src="/assets/Logo_Unexca_sin_fondo.png" alt="">
+                <img src="assets/Logo_Unexca_sin_fondo.png" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae culpa voluptate iste veniam omnis alias quaerat maxime architecto numquam? Exercitationem, earum assumenda! Molestiae sunt eveniet est perferendis at, repudiandae illo.</p>
             </div>
             <div class="inicio-noticias-card">
-                <img src="/assets/Logo_Unexca_sin_fondo.png" alt="">
+                <img src="assets/Logo_Unexca_sin_fondo.png" alt="">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa nihil asperiores molestiae illo temporibus obcaecati odit quasi culpa, consequatur maxime adipisci officiis incidunt amet, pariatur nulla est vero neque rem!</p>
             </div>
             <div class="inicio-noticias-card">
-                <img src="/assets/Logo_Unexca_sin_fondo.png" alt="">
+                <img src="assets/Logo_Unexca_sin_fondo.png" alt="">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi at beatae reiciendis eum? Ratione nostrum quod suscipit vel dolorem possimus! Ipsa sunt animi excepturi dignissimos sint vero ad doloremque culpa?</p>
             </div>
         </div>
         
         <div class="info-noticias-card-container">
             <div class="inicio-noticias-card">
-                <img src="/assets/Logo_Unexca_sin_fondo.png" alt="">
+                <img src="assets/Logo_Unexca_sin_fondo.png" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae culpa voluptate iste veniam omnis alias quaerat maxime architecto numquam? Exercitationem, earum assumenda! Molestiae sunt eveniet est perferendis at, repudiandae illo.</p>
             </div>
             <div class="inicio-noticias-card">
-                <img src="/assets/Logo_Unexca_sin_fondo.png" alt="">
+                <img src="assets/Logo_Unexca_sin_fondo.png" alt="">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa nihil asperiores molestiae illo temporibus obcaecati odit quasi culpa, consequatur maxime adipisci officiis incidunt amet, pariatur nulla est vero neque rem!</p>
             </div>
             <div class="inicio-noticias-card">
@@ -128,10 +99,80 @@
 
         <div class="info-inicio-button">
             <button>
-                <a href="">Más información</a>
+                <a href="noticias.html">Más información</a>
             </button>
         </div>
     </section>
+
+
+        <!--Ofertas Academicas-->
+    <div id="offer-text">
+        <h1>Oferta Academica</h1>
+        </div>
+    <section class="academic-offers">
+        <div class="gallery">
+            <div class="offers">
+                <a href="">
+                    <img src="resources/sample-image.png" alt="" id="careers">
+                </a>
+                <div class="desc"><h3>PNF EN CONTADURIA</h3>
+                    <br>
+                    <p>
+                    Adquiere profundos conocimientos de las Ciencias Contables y Sociales 
+                    para ser capaza de elaborar, revisar, examinar, presentar y dar fe publica 
+                    de la informacion financiera de identidades publicas y privadas.
+                    </p>
+                    <br>
+                    <div id="more">
+                        <a href=""><h3>Más información</h3></a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="offers">
+                <a href="">
+                    <img src="resources/sample-image.png" alt="" id="careers">
+                </a>
+                <div class="desc"><h3>PNF EN ADMINISTRACION</h3>
+                    <br>
+                    <p>
+                    Adquiere profundos conocimientos de las Ciencias Contables y Sociales 
+                    para ser capaza de elaborar, revisar, examinar, presentar y dar fe publica 
+                    de la informacion financiera de identidades publicas y privadas.
+                    </p>
+                    <br>
+                    <div id="more">
+                        <a href=""><h3>Más información</h3></a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="offers">
+            <a href="">
+                <img src="resources/sample-image.png" alt="" id="careers">
+            </a>
+            <div class="desc"><h3>PNF EN INFORMATICA</h3>
+                <br>
+                <p>
+                Adquiere profundos conocimientos de las Ciencias Contables y Sociales 
+                para ser capaza de elaborar, revisar, examinar, presentar y dar fe publica 
+                de la informacion financiera de identidades publicas y privadas.
+                </p>
+                <br>
+                <div id="more">
+                    <a href=""><h3>Más información</h3></a> 
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="end">
+            <div class="info"><a href="">Más información</a></div>
+        </section>
+        <!--Se acabaron las ofertas :C-->
+
 
     <footer>
         <section class="footer">

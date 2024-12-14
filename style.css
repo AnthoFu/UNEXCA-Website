@@ -1,96 +1,108 @@
-/*CSS general (por el momento)*/
+/*Css combinado de las ramas de Anthony, Jair y Aaron*/
 
-*{
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --azul: #022873;
+    --blanco: #fff;
+    --negro: #000;
+    --gris: #343233;
+}
+
+* {
     margin: 0;
     padding: 0;
-    font-family: 'roboto', sans-serif;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif; /*Jost es la otra tipografia*/
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
-    background-color: #022873;
+    min-height: 100vh;
+    background: var(--blanco);
 }
 
-header{
-    z-index: 1;
+/*MENU(UTILIZAR ESTA PARTE PARA TODAS LAS PAGINAS*/
+header {
+    display: flex;
+    justify-content: center;
+    background: url('assets/fondo-header.png') repeat-x;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.3));
     position: fixed;
     width: 100%;
-    max-height: 1080px;
-    background-color: #022873;
+    height: 115px;
+    margin-top: -7px;
+    z-index: 9999;
 }
 
-header .imagen-fondo{
-    position: absolute;
-    top: 50px;
-    /* rotate: 180deg; */
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    z-index: -1;
-}
-
-header .imagen-fondo img{
-    width: 100%;
-}
-
-header .menu {
-    display: flex; 
-    justify-content: space-around;
-    max-width: 1080px;
-    width: 100%;
-    margin: auto;
-    max-height: 100px;
-}
-
-header .img-header{
-    width: 100px;
-    height: 100px;
-}
-
-header .img-header #logo-header{
-    width: 100px;
-    height: 100px;
-    filter: brightness(0) invert(1);
-}
-
-header .links-header{
+.menu {
     display: flex;
-    list-style: none;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    height: 60px;
+    width: 1366px;
+    padding: 0 68px;
+    margin-top: 7px;
 }
 
-header .links-header a{
+.menu ul {
+    display: flex;
+    list-style-type: none;
+    height: 60px;
+    width: 724px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin:0 28px;
+}
+
+.menu li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 160px;
+    background: var(--azul);
+    text-align: center;
+    overflow: hidden;
+}
+
+.menu li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    top: -60px;
+    left: 0;
+    background-color: var(--blanco);
+    opacity: 0;
+    transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+.menu li:hover::before {
+    top: 0;
+    opacity: 1;
+}
+
+.menu nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     text-decoration: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: var(--blanco);
 }
 
-header .links-button{
-    width: 150px;
-    height: 75px;
-    background-color: #022873;
-    border-radius: 20px;
-    border: 2px solid white;
-    transition: 1s;
-}
-
-header .links-button:hover{
-    background: white;
-}
-
-header .links-button a:hover{
-    color: #011c52;
-}
-
-header .icon-header{
-    width: 50px;
-    align-self: center;
-}
-
-header .icon-header img{
-    width: 50px;
-    filter: brightness(0) invert(1);
+.logo-imagen,
+.usuario-logo {
+    height: 60px;
+    padding: 7px 0 0 0;
 }
 
 /* Aqui termina el header */
@@ -168,6 +180,10 @@ header .icon-header img{
     color: #011c52;
 }
 
+.inicio-noticias-tittle{
+    background-color: var(--azul);
+}
+
 .info-inicio-text{
     text-align: justify;
     font-size: 35px;
@@ -237,6 +253,72 @@ header .icon-header img{
 .info-inicio-button button{
     margin: 0px 0px 50px 0px;
 }
+
+/*Aqui empiezan las ofertas*/
+#offer-text{
+    background-color: var(--azul);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding: 25px;
+}
+.academic-offers{
+    position: relative;
+    background-color: white;
+    text-align: center;
+}
+.gallery {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+.offers {
+    margin-top: 30px;
+    background-color: #022873;
+    margin-left: 150px;
+    width: 330px;
+}
+.offers #careers {
+    width: 330px;
+    height: 200px;
+}
+.desc {
+    color: white;
+    width: 500px;
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+    max-width: 100%;
+    line-height: 20px;
+    box-sizing: border-box;
+}
+#more a {
+    color: white;
+}
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.end{
+    padding: 30px;
+    background-color: white;
+    font-size: 15px;
+}
+.info{
+    background-color: #022873;
+    padding: 10px;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+.info a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+/*Aqui terminan las ofertas*/
+
+
 
 
 /* Aqui termina el main */
@@ -308,4 +390,63 @@ footer .copy{
     75%, 100% {
         background-image: url("/assets/banner/banner_guaira.jpg");
     }
+}
+
+
+
+
+
+/*Combinacion del archivo de news.css*/
+
+.article{
+    background-color: white;
+    position: relative;
+    height: 100%;
+    max-width: 100%;
+    padding: 140px 70px;
+    text-align: justify;
+}
+
+/* Aqui empieza la cabeza del articulo */
+
+.head{
+    margin-right: 10%;
+    margin-left: 5%;
+}
+.main-img{
+    font-size: 10px;
+    text-align: left;
+}
+#sample-image{
+    width: 1200px;
+    height: 500px;
+}
+
+/*Flexbox despues de imagen*/
+.box{
+    height: 950px;
+    display: flex;
+    font-size: 20px;
+}
+.box1{
+    flex: 1;
+    padding: 0px 30px 0px 100px;
+}
+.box2{
+    text-align: center;
+    color: #022873;
+}
+.box2 a{
+    text-decoration: none;
+    color: white;
+}
+#bottom-image{
+    padding: 15px;
+    width: 800px;
+    height: 300px;
+}
+body #b-socials{
+    height: 35px; 
+    padding: 10px;
+    
 }
