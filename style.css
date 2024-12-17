@@ -1,30 +1,37 @@
-/*Css combinado de las ramas de Anthony, Jair y Aaron*/
-
+/* CSS general (por el momento) */
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
+    
+    /* Colores */
     --azul: #022873;
     --blanco: #fff;
     --negro: #000;
     --gris: #343233;
+    
+    /* Fuentes */
+    --fuente-primaria: 'Roboto', sans-serif;
+    --fuente-secundaria: 'Jost', sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif; /*Jost es la otra tipografia*/
-}
-html{
-    scroll-behavior: smooth;
-}
-body {
-    min-height: 100vh;
-    background: var(--blanco);
+    font-family: var(--fuente-primaria);
 }
 
-/*MENU(UTILIZAR ESTA PARTE PARA TODAS LAS PAGINAS*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--blanco);
+}
+
+/* MENU (UTILIZAR ESTA PARTE PARA TODAS LAS PÁGINAS) */
 header {
     display: flex;
     justify-content: center;
@@ -55,7 +62,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0;
-    margin:0 28px;
+    margin: 0 28px;
 }
 
 .menu li {
@@ -105,163 +112,177 @@ header {
     padding: 7px 0 0 0;
 }
 
-/* Aqui termina el header */
-
-
-/* Aqui empieza el main */
-#banner{
-    width: 100%;
+/* BANNER */
+#banner {
     height: 100vh;
-    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     text-align: center;
-    align-content: center;
     animation: banner 10s infinite linear alternate;
     position: relative;
     background-size: 100% 100%;
-    z-index: -2;
 }
 
-.banner-tittle{
-    color: white;
-}
-
-.banner-tittle h1 {
-    font-size: 100px;
-}
-
-
-#banner-button-section{
-    display: flex;
-    width: 100%;
-    text-align: center;
-    height: 100px;
-    margin-top: -100px;
-}
-
-.banner-button{
-    margin-top: 50px;
-    font-size: 30px;
-    width: 100%;
-    place-self: center;
-}
-
-.banner-button a {
-    text-decoration: none;
-    color: white;
-}
-
-.banner-button-img {
+.unexca {
+    font-size: 96px;
+    font-family: var(--fuente-secundaria);
     position: absolute;
-    rotate: 180deg;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    z-index: -1;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+    color: var(--blanco);
 }
 
-.banner-button-img img {
+.unexca_boton {
+    background: url('assets/fondo-header2.png') repeat-x;
+    height: 60px;
     width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
+.unexca_boton a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: var(--blanco);
+    padding: 30px;
+}
 
-.info-inicio{
+@keyframes banner {
+    0%, 20% {
+        background-image: url("assets/banner/banner_altagracia.jpg");
+    }
+    25%, 45% {
+        background-image: url("assets/banner/banner_floresta.jpg");
+    }
+    50%, 70% {
+        background-image: url("assets/banner/banner_urbina.jpg");
+    }
+    75%, 100% {
+        background-image: url("assets/banner/banner_guaira.jpg");
+    }
+}
+
+/* Main */
+main {
+    position: relative;
+    z-index: 0;
+    scroll-margin-top: 70px;
+}
+
+/* Historia breve */
+.info-inicio {
     display: grid;
     background-color: white;
     text-align: center;
     gap: 30px;
 }
 
-.info-inicio-tittle{
-    margin-top: 50px;
-    font-size: 50px;
-    color: #011c52;
+.info-inicio-tittle {
+    padding-top: 40px;
+    font-size: 48px;
+    font-weight: 500;
 }
 
-.inicio-noticias-tittle{
-    background-color: var(--azul);
+.info-inicio-text {
+    font-size: 36px;
+    font-weight: 100;
+    padding: 0 136px;
+    padding-bottom: 68px;
 }
 
-.info-inicio-text{
-    text-align: justify;
-    font-size: 35px;
-    margin: 0px 100px 0px 100px;
-}
-
+/* Botón */
 .info-inicio-button {
-    margin: 50px 0px 50px 0px;
-}
-
-.info-inicio-button a { 
-    text-decoration: none;
-    color: white;
-}
-
-.info-inicio-button button {
-    width: 30%;
-    height: 50px;
-    background-color: #022873;
-    border-radius: 20px;
-    border: 2px solid white;
-    font-size: 20px;
-}
-
-.info-inicio-button button:hover {
-    background-color: white;
-    border-radius: 20px;
-    border: 2px solid #011c52;
-}
-
-.info-inicio-button button:hover a {
-    color: #011c52;
-}
-
-.inicio-noticias-tittle{
-    margin: 50px 0px 50px 0px;
-    font-size: 50px;
-    color: white;
-    width: 100%;
-    text-align: center;
-}
-
-.inicio-noticias {
-    background-color: white;
-}
-
-.info-noticias-card-container{
-    gap: 100px;
     display: flex;
-}
-
-.inicio-noticias-card {
+    background-color: var(--blanco);
+    align-items: center;
+    justify-content: center;
+    height: 80px;
     width: 100%;
-    height: 400px;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.3));
+}
+
+.info-inicio-button a {
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--azul);
+    height: 40px;
+    width: 400px;
+    text-decoration: none;
+    color: var(--blanco);
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.3));
+}
+
+/* Título de sección */
+.tittle {
+    display: flex;
+    background-color: var(--azul);
+    font-size: 48px;
+    font-weight: 500;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    width: 100%;
+    text-align: center;
+    filter: drop-shadow(10px rgba(0, 0, 0, 0.3));
+}
+
+/* Sección de Noticias */
+.inicio-noticias {
+    padding: 30px;
     text-align: center;
 }
 
-.inicio-noticias-card img{
-    width: 250px;
-    height: 250px;
+.info-noticias-card-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.info-inicio-button {
-    text-align: center;
+article {
+    display: block;
+    background-color: var(--azul);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: auto;
+    width: 320px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.info-inicio-button button{
-    margin: 0px 0px 50px 0px;
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+article img {
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+}
+
+article h3 {
+    font-size: 24px;
+    font-weight: 400;
+    padding: 20px;
+    color: var(--blanco);
+    text-align: start;
+}
+
+article h3 a {
+    color: inherit;
+    text-decoration: none;
 }
 
 /*Aqui empiezan las ofertas*/
-#offer-text{
-    background-color: var(--azul);
-    color: white;
-    font-size: 25px;
-    text-align: center;
-    padding: 25px;
-}
 .academic-offers{
     position: relative;
     background-color: white;
@@ -316,15 +337,8 @@ header {
     text-decoration: none;
     font-size: 20px;
 }
-/*Aqui terminan las ofertas*/
 
-
-
-
-/* Aqui termina el main */
-
-/* Aqui empieza el footer */
-
+/* Footer */
 footer{
     background-color: #022873;
 }
@@ -375,25 +389,6 @@ footer .copy{
 }
 
 /* Aqui termina el footer */
-
-
-@keyframes banner {
-    0%, 20% {
-        background-image: url("/assets/banner/banner_altagracia.png");
-    }
-    25%, 45% {
-        background-image: url("/assets/banner/banner_floresta.png");
-    }
-    50%, 70% {
-        background-image: url("/assets/banner/banner_urbina.png");
-    }
-    75%, 100% {
-        background-image: url("/assets/banner/banner_guaira.jpg");
-    }
-}
-
-
-
 
 
 /*Combinacion del archivo de news.css*/
