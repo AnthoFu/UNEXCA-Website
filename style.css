@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-    
     /* Colores */
     --azul: #022873;
     --blanco: #fff;
@@ -47,7 +46,7 @@ header {
 .menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 60px;
     width: 1366px;
     padding: 0 68px;
@@ -106,6 +105,18 @@ header {
     color: var(--blanco);
 }
 
+/* Mostrar el menú por defecto en pantallas grandes */
+nav {
+    display: flex; /* Asegúrate de que el menú esté visible en pantallas grandes */
+}
+
+/* Mostrar el menú hamburguesa en pantallas pequeñas */
+.hamburger {
+    display: none; /* Ocultar el icono de hamburguesa por defecto */
+    font-size: 30px; /* Tamaño del icono de hamburguesa */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el icono */
+}
+
 .logo-imagen,
 .usuario-logo {
     height: 60px;
@@ -115,6 +126,7 @@ header {
 /* BANNER */
 #banner {
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -282,27 +294,31 @@ article h3 a {
     text-decoration: none;
 }
 
-/*Aqui empiezan las ofertas*/
-.academic-offers{
+/* Aquí empiezan las ofertas */
+.academic-offers {
     position: relative;
     background-color: white;
     text-align: center;
 }
+
 .gallery {
     padding: 0 6px;
     float: left;
     width: 24.99999%;
 }
+
 .offers {
     margin-top: 30px;
     background-color: #022873;
     margin-left: 150px;
     width: 330px;
 }
+
 .offers #careers {
     width: 330px;
     height: 200px;
 }
+
 .desc {
     color: white;
     width: 500px;
@@ -313,37 +329,42 @@ article h3 a {
     line-height: 20px;
     box-sizing: border-box;
 }
+
 #more a {
     color: white;
 }
+
 .clear:after {
     content: "";
     display: table;
     clear: both;
 }
-.end{
+
+.end {
     padding: 30px;
     background-color: white;
     font-size: 15px;
 }
-.info{
+
+.info {
     background-color: #022873;
     padding: 10px;
     margin-left: 35%;
     margin-right: 35%;
 }
-.info a{
+
+.info a {
     color: white;
     text-decoration: none;
     font-size: 20px;
 }
 
 /* Footer */
-footer{
+footer {
     background-color: #022873;
 }
 
-footer .footer{
+footer .footer {
     display: flex;
     justify-content: space-between;
     color: white;
@@ -351,23 +372,23 @@ footer .footer{
     max-width: 100%;
 }
 
-footer .icons{
+footer .icons {
     position: relative;
     padding: 20px 20px;
     line-height: 30px; 
 }
 
-footer #footer-logo{
+footer #footer-logo {
     height: 130px; 
     width: 230px;
 }
 
-footer #socials{
+footer #socials {
     height: 35px; 
     padding: 10px;
 }
 
-footer .information{
+footer .information {
     flex: 1;
     position: relative;
     text-align: left;
@@ -377,23 +398,21 @@ footer .information{
     flex-shrink: 5;   
 }
 
-footer .information a{
+footer .information a {
     color: white;
 }
 
-footer .copy{
+footer .copy {
     align-self: center;
     text-align: center;
     color: white;
     margin-bottom: 1%;
 }
 
-/* Aqui termina el footer */
+/* Aquí termina el footer */
 
-
-/*Combinacion del archivo de news.css*/
-
-.article{
+/* Combinación del archivo de news.css */
+.article {
     background-color: white;
     position: relative;
     height: 100%;
@@ -402,46 +421,163 @@ footer .copy{
     text-align: justify;
 }
 
-/* Aqui empieza la cabeza del articulo */
-
-.head{
+/* Aquí empieza la cabeza del artículo */
+.head {
     margin-right: 10%;
     margin-left: 5%;
 }
-.main-img{
+
+.main-img {
     font-size: 10px;
     text-align: left;
 }
-#sample-image{
+
+#sample-image {
     width: 1200px;
     height: 500px;
 }
 
-/*Flexbox despues de imagen*/
-.box{
+/* Flexbox después de imagen */
+.box {
     height: 950px;
     display: flex;
     font-size: 20px;
 }
-.box1{
+
+.box1 {
     flex: 1;
     padding: 0px 30px 0px 100px;
 }
-.box2{
+
+.box2 {
     text-align: center;
     color: #022873;
 }
-.box2 a{
+
+.box2 a {
     text-decoration: none;
     color: white;
 }
-#bottom-image{
+
+#bottom-image {
     padding: 15px;
     width: 800px;
     height: 300px;
 }
-body #b-socials{
+
+body #b-socials {
     height: 35px; 
     padding: 10px;
-    
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 975px) {
+    .info-inicio-button a {
+        width: 100%;
+    }
+
+    .unexca {
+        font-size: 3.6em; /* Asegúrate de que este tamaño sea adecuado */
+    }
+
+    .info-inicio-tittle {
+        font-size: 3.6em; /* Asegúrate de que este tamaño sea adecuado */
+    }
+
+    .info-inicio-text {
+        font-size: 24px; /* Ajusta este tamaño según sea necesario */
+        padding: 0 20px; /* Asegúrate de que el padding sea adecuado */
+    }
+
+    .academic-offers .gallery {
+        width: 100%; /* Cambiar a 100% en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+
+    .offers {
+        margin-left: 0; /* Eliminar margen en pantallas pequeñas */
+        width: 100%; /* Cambiar a 100% en pantallas pequeñas */
+    }
+
+    .info {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .article {
+        padding: 70px 20px; /* Ajustar padding en pantallas pequeñas */
+    }
+
+    .box {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        height: auto; /* Ajustar altura */
+    }
+
+    #sample-image {
+        width: 100%; /* Cambiar a 100% en pantallas pequeñas */
+        height: auto; /* Ajustar altura */
+    }
+
+    /* Ajustes adicionales */
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .menu ul {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        width: 100%; /* Asegurarse de que ocupe el ancho completo */
+    }
+
+    .menu li {
+        width: 100%; /* Asegurarse de que cada elemento ocupe el ancho completo */
+    }
+
+    footer .footer {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar elementos */
+    }
+
+    footer .information {
+        text-align: center; /* Centrar texto en pantallas pequeñas */
+        padding: 20px; /* Ajustar padding */
+    }
+
+    .nav {
+        display: none; /* Asegúrate de que el menú esté oculto */
+        flex-direction: column; /* Cambiar a columna */
+        position: absolute; /* Posicionar el menú */
+        top: 60px; /* Ajustar según la altura del header */
+        right: 0; /* Alinear a la derecha */
+        background-color: var(--azul); /* Fondo del menú */
+        width: 100%; /* Ancho completo */
+        z-index: 999; /* Asegurarse de que esté por encima de otros elementos */
+    }
+
+    .nav.active {
+        display: flex; /* Mostrar el menú cuando está activo */
+    }
+
+    .nav ul {
+        list-style-type: none; /* Sin viñetas */
+        padding: 0; /* Sin padding */
+        margin: 0; /* Sin margen */
+    }
+
+    .nav li {
+        text-align: center; /* Centrar texto */
+        padding: 15px 0; /* Espaciado */
+    }
+
+    .nav a {
+        color: var(--blanco); /* Color del texto */
+        text-decoration: none; /* Sin subrayado */
+        font-size: 1.5em; /* Tamaño de fuente */
+    }
+
+    .hamburger {
+        display: block; /* Mostrar el icono de hamburguesa en pantallas pequeñas */
+    }
 }
