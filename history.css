@@ -159,6 +159,7 @@ p{
     width: 75%;
     transform: translate(10%, -85%);
     color: #022873;
+    background-color: #fff;
 }
 
 .wall{
@@ -175,7 +176,9 @@ p{
     width: 822px;
     height: 409px;
 }
-
+.small{
+    font-size: 12px;
+}
 .titles{
     color: #022873;
     margin-left: 3%;
