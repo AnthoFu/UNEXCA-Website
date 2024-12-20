@@ -1,0 +1,241 @@
+/* CSS general (por el momento) */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    
+    /* Colores */
+    --azul: #022873;
+    --blanco: #fff;
+    --negro: #000;
+    --gris: #343233;
+    
+    /* Fuentes */
+    --fuente-primaria: 'Roboto', sans-serif;
+    --fuente-secundaria: 'Jost', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente-primaria);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--blanco);
+}
+
+/* MENU (UTILIZAR ESTA PARTE PARA TODAS LAS PÁGINAS) */
+header {
+    display: flex;
+    justify-content: center;
+    background: url('assets/fondo-header.png') repeat-x;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.3));
+    position: fixed;
+    width: 100%;
+    height: 115px;
+    margin-top: -7px;
+    z-index: 9999;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 1366px;
+    padding: 0 68px;
+    margin-top: 7px;
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+    height: 60px;
+    width: 724px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0 28px;
+}
+
+.menu li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 160px;
+    background: var(--azul);
+    text-align: center;
+    overflow: hidden;
+}
+
+.menu li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    top: -60px;
+    left: 0;
+    background-color: var(--blanco);
+    opacity: 0;
+    transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+.menu li:hover::before {
+    top: 0;
+    opacity: 1;
+}
+
+.menu nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: var(--blanco);
+}
+
+.logo-imagen,
+.usuario-logo {
+    height: 60px;
+    padding: 7px 0 0 0;
+}
+
+/* BANNER */
+#banner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    animation: banner 10s infinite linear alternate;
+    position: relative;
+    background-size: 100% 100%;
+}
+
+@keyframes banner {
+    0%, 20% {
+        background-image: url("assets/banner/banner_altagracia.jpg");
+    }
+    25%, 45% {
+        background-image: url("assets/banner/banner_floresta.jpg");
+    }
+    50%, 70% {
+        background-image: url("assets/banner/banner_urbina.jpg");
+    }
+    75%, 100% {
+        background-image: url("assets/banner/banner_guaira.jpg");
+    }
+}
+
+/* Main */
+p{
+    margin-bottom: 30px;
+}
+
+.main{
+    position: relative;
+    max-width: 100%;
+    text-align: justify;
+    font-size: 30px;
+}
+
+.head{
+    position: absolute;
+    padding: 20px 30px;
+    width: 75%;
+    transform: translate(10%, -85%);
+    color: #022873;
+}
+
+.wall{
+    position: relative;
+    padding: 10px 20px;
+    margin-left: 7%;
+    margin-right: 20%;
+    background-color: #fff;
+    max-height: 100%;
+    font-size: 20px;
+}
+
+#sede{
+    width: 822px;
+    height: 409px;
+}
+
+.titles{
+    color: #022873;
+    margin-left: 3%;
+    font-size: 30px;
+    margin: 30px;
+}
+.lista{
+    margin-left: 5%;
+    margin-bottom: 30px;
+}
+
+/* Sección de Noticias */
+
+
+/* Footer */
+footer{
+    background-color: #022873;
+}
+
+footer .footer{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 0px 20px;
+    max-width: 100%;
+}
+
+footer .icons{
+    position: relative;
+    padding: 20px 20px;
+    line-height: 30px; 
+}
+
+footer #footer-logo{
+    height: 130px; 
+    width: 230px;
+}
+
+footer #socials{
+    height: 35px; 
+    padding: 10px;
+}
+
+footer .information{
+    flex: 1;
+    position: relative;
+    text-align: left;
+    padding: 25px 40px;
+    line-height: 40px;
+    font-size: 16px;
+    flex-shrink: 5;   
+}
+
+footer .information a{
+    color: white;
+}
+
+footer .copy{
+    align-self: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 1%;
+}
