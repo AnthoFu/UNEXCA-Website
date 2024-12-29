@@ -301,18 +301,6 @@ article h3 a {
     text-align: center;
 }
 
-.gallery {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-}
-
-.offers {
-    margin-top: 30px;
-    background-color: #022873;
-    margin-left: 150px;
-    width: 330px;
-}
 
 .offers #careers {
     width: 330px;
@@ -477,7 +465,7 @@ body #b-socials {
     }
 
     .unexca {
-        font-size: 3.6em; /* Asegúrate de que este tamaño sea adecuado */
+        font-size: 3.0rem; /* Asegúrate de que este tamaño sea adecuado */
     }
 
     .info-inicio-tittle {
@@ -579,5 +567,116 @@ body #b-socials {
 
     .hamburger {
         display: block; /* Mostrar el icono de hamburguesa en pantallas pequeñas */
+    }
+}
+
+
+/*Codigo para el carrusel de imagenes*/
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-button {
+    background-color: var(--azul);
+    color: var(--blanco);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Asegúrate de que la galería use flexbox para mostrar elementos en fila */
+.gallery {
+    display: flex; /* Cambia a flex para mostrar en horizontal */
+    flex-direction: row; /* Asegúrate de que los elementos se alineen en fila */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    padding: 0 6px;
+}
+
+/* Ajusta la clase .offers para que tenga un ancho adecuado */
+.offers {
+    margin-top: 30px;
+    background-color: #022873;
+    margin-left: 20px; /* Ajusta el margen para que no esté tan pegado */
+    width: 300px; /* Ancho fijo */
+    height: 500px; /* Altura fija */
+    display: flex; /* Usar flexbox para alinear el contenido */
+    flex-direction: column; /* Alinear el contenido en columna */
+    justify-content: space-between; /* Espacio entre los elementos */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para un efecto visual */
+}
+
+
+#more a {
+    display: block; /* Asegúrate de que el enlace ocupe todo el ancho */
+    text-align: center; /* Centrar el texto */
+    background-color: var(--azul); /* Color de fondo */
+    color: var(--blanco); /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    margin-top: auto; /* Empujar el botón hacia abajo */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+#more a:hover {
+    background-color: #0056b3; /* Cambiar el color al pasar el mouse */
+}
+
+.image-container {
+    width: 100%; /* Asegúrate de que ocupe todo el ancho del contenedor */
+    height: 200px; /* Altura fija para el contenedor de la imagen */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
+    display: flex; /* Usar flexbox para centrar la imagen */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.image-container img {
+    width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+    object-fit: cover; /* Asegúrate de que la imagen cubra el contenedor sin distorsionarse */
+}
+
+@media (max-width: 768px) {
+    .offers {
+        width: 90%; /* Cambiar a un ancho del 90% en pantallas pequeñas */
+        height: auto; /* Ajustar altura automáticamente */
+        margin-left: auto; /* Centrar horizontalmente */
+        margin-right: auto; /* Centrar horizontalmente */
+    }
+
+    .gallery {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar elementos */
+    }
+
+    .carousel {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar los elementos */
+    }
+
+    .carousel-button {
+        width: 100%; /* Hacer que los botones ocupen el ancho completo */
+        margin: 5px 0; /* Espacio vertical entre los botones */
+    }
+}
+
+@media (max-width: 480px) {
+    .offers {
+        width: 100%; /* Cambiar a un ancho del 100% en pantallas muy pequeñas */
+    }
+
+    .desc {
+        font-size: 14px; /* Ajustar el tamaño de fuente para pantallas pequeñas */
+    }
+
+    #more a {
+        font-size: 16px; /* Ajustar el tamaño de fuente del botón */
+        
     }
 }
