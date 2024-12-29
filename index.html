@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <title>Inicio - UNEXCA</title>
 </head>
 <body>
@@ -15,7 +16,10 @@
             <a class="logo_menu" href="index.html">
                 <img src="assets/logo_unexca.svg" alt="Logo UNEXCA" class="logo-imagen">
             </a>
-            <nav class="menu_nav">
+            <div class="hamburger" id="hamburger">
+                &#9776; <!-- Este es el símbolo de menú hamburguesa -->
+            </div>
+            <nav class="nav" id="nav">
                 <ul class="menu_nav_lista">
                     <li><a href="">Noticias</a></li>
                     <li><a href="">Oferta Academica</a></li>
@@ -23,7 +27,6 @@
                     <li><a href="">Historia</a></li>
                 </ul>
             </nav>
-            <div class="usuario"><img src="assets/avatar.svg" class="usuario-logo"></div>
         </section>
 
     </header>
@@ -78,73 +81,17 @@
     </section>
 
     <!--***********************************************************************************-->
-        <!--Ofertas Academicas-->
-    <h2 class="tittle">Oferta Academica</h2>
-    <section class="academic-offers">
-        <div class="gallery">
-            <div class="offers">
-                <a href="">
-                    <img src="resources/sample-image.png" alt="" id="careers">
-                </a>
-                <div class="desc"><h3>PNF EN CONTADURIA</h3>
-                    <br>
-                    <p>
-                    Adquiere profundos conocimientos de las Ciencias Contables y Sociales 
-                    para ser capaza de elaborar, revisar, examinar, presentar y dar fe publica 
-                    de la informacion financiera de identidades publicas y privadas.
-                    </p>
-                    <br>
-                    <div id="more">
-                        <a href=""><h3>Más información</h3></a> 
-                    </div>
-                </div>
-            </div>
+<!-- Ofertas Academicas -->
+<h2 class="tittle">Oferta Academica</h2>
+<section class="academic-offers">
+    <div class="carousel">
+        <button id="prev" class="carousel-button">←</button>
+        <div class="gallery" id="gallery">
+            <!-- Carreras se mostrarán aquí -->
         </div>
-        <div class="gallery">
-            <div class="offers">
-                <a href="">
-                    <img src="resources/sample-image.png" alt="" id="careers">
-                </a>
-                <div class="desc"><h3>PNF EN ADMINISTRACION</h3>
-                    <br>
-                    <p>
-                    Adquiere profundos conocimientos de las Ciencias Contables y Sociales 
-                    para ser capaza de elaborar, revisar, examinar, presentar y dar fe publica 
-                    de la informacion financiera de identidades publicas y privadas.
-                    </p>
-                    <br>
-                    <div id="more">
-                        <a href=""><h3>Más información</h3></a> 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="gallery">
-            <div class="offers">
-            <a href="">
-                <img src="resources/sample-image.png" alt="" id="careers">
-            </a>
-            <div class="desc"><h3>PNF EN INFORMATICA</h3>
-                <br>
-                <p>
-                Adquiere profundos conocimientos de las Ciencias Contables y Sociales 
-                para ser capaza de elaborar, revisar, examinar, presentar y dar fe publica 
-                de la informacion financiera de identidades publicas y privadas.
-                </p>
-                <br>
-                <div id="more">
-                    <a href=""><h3>Más información</h3></a> 
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="end">
-        </section>
-                    <!--Boton-->
-    <section class="info-inicio-button">
-                <a href="">Más información</a>
-    </section>
+        <button id="next" class="carousel-button">→</button>
+    </div>
+</section>
     
         <!--Se acabaron las ofertas :C-->
 <!--***********************************************************************************-->
@@ -196,6 +143,6 @@
     </footer>
 
 
-
+    <script src="main.js"></script>
 </body>
 </html>
