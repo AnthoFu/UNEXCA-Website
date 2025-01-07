@@ -1,0 +1,41 @@
+
+/* Main del history.html*/
+
+.header-container{
+    display: block;
+}
+.header-container img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.main-history{
+    position: relative;
+    padding: 10px 20px;
+    margin-left: 7%;
+    margin-right: 20%;
+    background-color: #fff;
+    max-height: 100%;
+    font-size: 20px;
+}
+#sede{
+    width: 70vw;
+    height: 30vh;
+}
+
+
+
+.small{
+    font-size: 12px;
+}
+.titles{
+    color: #022873;
+    margin-left: 3%;
+    font-size: 30px;
+    margin: 30px;
+}
+.lista{
+    margin-left: 5%;
+    margin-bottom: 30px;
+}

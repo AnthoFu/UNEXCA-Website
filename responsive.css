@@ -1,0 +1,870 @@
+/* CSS general (por el momento) */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    /* Colores */
+    --azul: #031F6B;
+    --blanco: #fff;
+    --negro: #000;
+    --gris: #343233;
+    
+    /* Fuentes */
+    --fuente-primaria: 'Roboto', sans-serif;
+    --fuente-secundaria: 'Jost', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente-primaria);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--blanco);
+}
+
+/* MENU (UTILIZAR ESTA PARTE PARA TODAS LAS PÁGINAS) */
+header {
+    display: flex;
+    justify-content: center;
+    background: url('assets/fondo-header.png') repeat-x;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.5));
+    position: fixed;
+    width: 100vw;
+    height: 115px;
+    margin-top: -7px;
+    z-index: 9999;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 1366px;
+    padding: 0 68px;
+    margin-top: 7px;
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+    height: 60px;
+    width: 724px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0 28px;
+}
+
+.menu li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 160px;
+    background: var(--azul);
+    text-align: center;
+    overflow: hidden;
+}
+
+.menu li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    top: -60px;
+    left: 0;
+    background-color: var(--blanco);
+    opacity: 0;
+    transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+.menu li:hover::before {
+    top: 0;
+    opacity: 1;
+}
+
+.menu nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: var(--blanco);
+}
+
+.logo-imagen,
+.usuario-logo {
+    height: 60px;
+    padding: 7px 0 0 0;
+}
+
+/* Mostrar el menú por defecto en pantallas grandes */
+nav {
+    display: flex; /* Asegúrate de que el menú esté visible en pantallas grandes */
+}
+
+/* Mostrar el menú hamburguesa en pantallas pequeñas */
+.hamburger {
+    display: none; /* Ocultar el icono de hamburguesa por defecto */
+    font-size: 30px; /* Tamaño del icono de hamburguesa */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el icono */
+}
+
+
+/* BANNER */
+#banner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    animation: banner 10s infinite linear alternate;
+    position: relative;
+    background-size: 100% 100%;
+}
+
+.unexca {
+    font-size: 96px;
+    font-family: var(--fuente-secundaria);
+    position: absolute;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+    color: var(--blanco);
+}
+
+.unexca_boton {
+    background: url('assets/fondo-header2.png') repeat-x;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.3));
+}
+
+.unexca_boton a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: var(--blanco);
+    padding: 30px;
+}
+
+@keyframes banner {
+    0%, 20% {
+        background-image: url("assets/banner/banner_altagracia.jpg");
+    }
+    25%, 45% {
+        background-image: url("assets/banner/banner_floresta.jpg");
+    }
+    50%, 70% {
+        background-image: url("assets/banner/banner_urbina.jpg");
+    }
+    75%, 100% {
+        background-image: url("assets/banner/banner_guaira.jpg");
+    }
+}
+
+/* Main */
+main {
+    position: relative;
+    z-index: 0;
+    scroll-margin-top: 70px;
+}
+
+/* Historia breve */
+.info-inicio {
+    display: grid;
+    background-color: white;
+    text-align: center;
+    gap: 30px;
+}
+
+.info-inicio-tittle {
+    padding-top: 40px;
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--azul)
+}
+
+.info-inicio-text {
+    font-size: 36px;
+    font-weight: 300;
+    padding: 0 136px;
+    padding-bottom: 30px;
+}
+
+/* Botón */
+.info-inicio-button {
+    display: flex;
+    background-color: var(--a);
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+}
+
+.info-inicio-button a {
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--azul);
+    height: 40px;
+    width: 400px;
+    text-decoration: none;
+    color: var(--blanco);
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.info-inicio-button a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.info-inicio-button-blanco {
+    display: flex;
+    background-color: var(--azul);
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+}
+
+.info-inicio-button-blanco a {
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--blanco);
+    height: 40px;
+    width: 400px;
+    text-decoration: none;
+    color: var(--azul);
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.info-inicio-button-blanco a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Título de sección */
+.tittle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100px;
+    text-align: center;
+    background: url('assets/fondo-header2-2-blanco.png') repeat-x;
+}
+.tittle-texto{
+    display: flex;
+    font-size: 48px;
+    font-weight: 500;
+    height: 120px;
+    padding;
+    align-items: end;
+    color: var(--azul);
+}
+.tittle-blanco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100px;
+    text-align: center;
+    background: url('assets/fondo-header2-2.png') repeat-x;
+    padding-bottom: 15px; /*ESTO ES UNA ESTUPIDEZ PERO NO BORRAR*/
+}
+.tittle-texto-blanco{
+    display: flex;
+    font-size: 48px;
+    font-weight: 500;
+    height: 120px;
+    padding;
+    align-items: end;
+    color: var(--blanco);
+}
+
+/*SECCION DEL MAPA*/
+.mapa-sedes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    gap: 10px;
+    padding: 40px;
+}
+
+.fotos-sedes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+}
+
+.foto-sede {
+    position: relative;
+    width: 400px;
+    height: 181px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.foto-sede:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.fotos-sedes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%;
+    cursor: pointer;
+}
+.nombre-sede {
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    font-size: 20px;
+    color: white;
+    background-color: var(--azul);
+    padding: 5px;
+}
+
+.mapa-container {
+    width: 50%;
+    height: 544px;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.5));
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Sección de Noticias */
+.inicio-noticias {
+    text-align: center;
+    background-color: var(--azul);
+}
+
+.info-noticias-card-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 68px;
+    background-color: var(--blanco)
+}
+
+article {
+    display: block;
+    background-color: var(--azul);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: auto;
+    width: 320px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+article img {
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+}
+
+article h3 {
+    font-size: 24px;
+    font-weight: 400;
+    padding: 20px;
+    color: var(--blanco);
+    text-align: start;
+}
+
+article h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+/* Aquí empiezan las ofertas */
+#info-carrera-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul);
+    padding: 40px 68px;
+    cursor: grab;
+}
+.carrera{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--blanco);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+    width: 380px;
+    scroll-snap-align: start;
+    margin: 0 20px;
+}
+.carrera img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carrera-texto{
+    padding: 15px 20px;
+}
+.carrera h3, .carrera p{
+    color: var(--azul);
+    text-align: start;
+}
+.carrera h3, .carrera-link{
+    font-size: 20px;
+}
+.carrera-desc {
+    margin: 9px 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+.carrera a{
+    color: inherit;
+}
+
+/* Footer */
+footer {
+    background-color: var(--azul);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+footer .contenido-footer {
+    color: var(--blanco);
+    display: flex;
+    flex-grow: 1;
+    padding-top:40px;
+    justify-content: initial;
+}
+
+footer .iconos-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    align-items: center;
+    margin: 0 68px;
+}
+
+footer .logo-universidad-footer img {
+    width: 240px;
+    height: 140px;
+}
+
+footer .iconos-redes-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 240px;
+}
+
+footer .iconos-redes-footer img {
+    height: 40px;
+    width: 40px;
+}
+
+footer .informacion {
+    text-align: left;
+    margin: 20px 0;
+    padding-right: 20px;
+}
+
+footer .informacion h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer .informacion ul {
+    list-style: none;
+}
+
+footer .informacion ul li {
+    margin: 5px 0;
+}
+
+footer .informacion ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer .copy {
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    
+}
+
+/************************************************************************/
+
+/* Combinación del archivo de news.css */
+.article {
+    background-color: white;
+    position: relative;
+    height: 100%;
+    max-width: 100%;
+    padding: 140px 70px;
+    text-align: justify;
+}
+
+/* Aquí empieza la cabeza del artículo */
+.head {
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
+.main-img {
+    font-size: 10px;
+    text-align: left;
+}
+
+#sample-image {
+    width: 1200px;
+    height: 500px;
+}
+
+/* Flexbox después de imagen */
+.box {
+    height: 950px;
+    display: flex;
+    font-size: 20px;
+}
+
+.box1 {
+    flex: 1;
+    padding: 0px 30px 0px 100px;
+}
+
+.box2 {
+    text-align: center;
+    color: #022873;
+}
+
+.box2 a {
+    text-decoration: none;
+    color: white;
+}
+
+#bottom-image {
+    padding: 15px;
+    width: 800px;
+    height: 300px;
+}
+
+body #b-socials {
+    height: 35px; 
+    padding: 10px;
+}
+/************************************************************************/
+/* Media Queries para Responsividad */
+@media (max-width: 975px) {
+    .info-inicio-button a {
+        width: 100%;
+    }
+
+    .unexca {
+        font-size: 3.0rem; /* Asegúrate de que este tamaño sea adecuado */
+    }
+
+    .info-inicio-tittle {
+        font-size: 3.6em; /* Asegúrate de que este tamaño sea adecuado */
+    }
+
+    .info-inicio-text {
+        font-size: 24px; /* Ajusta este tamaño según sea necesario */
+        padding: 0 20px; /* Asegúrate de que el padding sea adecuado */
+    }
+
+    .academic-offers .gallery {
+        width: 100%; /* Cambiar a 100% en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+
+    .offers {
+        margin-left: 0; /* Eliminar margen en pantallas pequeñas */
+        width: 100%; /* Cambiar a 100% en pantallas pequeñas */
+    }
+
+    .info {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .article {
+        padding: 70px 20px; /* Ajustar padding en pantallas pequeñas */
+    }
+
+    .box {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        height: auto; /* Ajustar altura */
+    }
+
+    #sample-image {
+        width: 100%; /* Cambiar a 100% en pantallas pequeñas */
+        height: auto; /* Ajustar altura */
+    }
+
+    /* Ajustes adicionales */
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .menu ul {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        width: 100%; /* Asegurarse de que ocupe el ancho completo */
+    }
+
+    .menu li {
+        width: 100%; /* Asegurarse de que cada elemento ocupe el ancho completo */
+    }
+
+    footer .footer {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar elementos */
+    }
+
+    footer .information {
+        text-align: center; /* Centrar texto en pantallas pequeñas */
+        padding: 20px; /* Ajustar padding */
+    }
+
+    .nav {
+        display: none; /* Asegúrate de que el menú esté oculto */
+        flex-direction: column; /* Cambiar a columna */
+        position: absolute; /* Posicionar el menú */
+        top: 60px; /* Ajustar según la altura del header */
+        right: 0; /* Alinear a la derecha */
+        background-color: var(--azul); /* Fondo del menú */
+        width: 100%; /* Ancho completo */
+        z-index: 999; /* Asegurarse de que esté por encima de otros elementos */
+    }
+
+    .nav.active {
+        display: flex; /* Mostrar el menú cuando está activo */
+    }
+
+    .nav ul {
+        list-style-type: none; /* Sin viñetas */
+        padding: 0; /* Sin padding */
+        margin: 0; /* Sin margen */
+    }
+
+    .nav li {
+        text-align: center; /* Centrar texto */
+        padding: 15px 0; /* Espaciado */
+    }
+
+    .nav a {
+        color: var(--blanco); /* Color del texto */
+        text-decoration: none; /* Sin subrayado */
+        font-size: 1.5em; /* Tamaño de fuente */
+    }
+
+    .hamburger {
+        display: block; /* Mostrar el icono de hamburguesa en pantallas pequeñas */
+    }
+}
+
+
+/*Codigo para el carrusel de imagenes*/
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-button {
+    background-color: var(--azul);
+    color: var(--blanco);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Asegúrate de que la galería use flexbox para mostrar elementos en fila */
+.gallery {
+    display: flex; /* Cambia a flex para mostrar en horizontal */
+    flex-direction: row; /* Asegúrate de que los elementos se alineen en fila */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    padding: 0 6px;
+}
+
+/* Ajusta la clase .offers para que tenga un ancho adecuado */
+.offers {
+    margin-top: 30px;
+    background-color: #022873;
+    margin-left: 20px; /* Ajusta el margen para que no esté tan pegado */
+    width: 300px; /* Ancho fijo */
+    height: 500px; /* Altura fija */
+    display: flex; /* Usar flexbox para alinear el contenido */
+    flex-direction: column; /* Alinear el contenido en columna */
+    justify-content: space-between; /* Espacio entre los elementos */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para un efecto visual */
+}
+
+
+#more a {
+    display: block; /* Asegúrate de que el enlace ocupe todo el ancho */
+    text-align: center; /* Centrar el texto */
+    background-color: var(--azul); /* Color de fondo */
+    color: var(--blanco); /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    margin-top: auto; /* Empujar el botón hacia abajo */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+#more a:hover {
+    background-color: #0056b3; /* Cambiar el color al pasar el mouse */
+}
+
+.image-container {
+    width: 100%; /* Asegúrate de que ocupe todo el ancho del contenedor */
+    height: 200px; /* Altura fija para el contenedor de la imagen */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
+    display: flex; /* Usar flexbox para centrar la imagen */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.image-container img {
+    width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+    object-fit: cover; /* Asegúrate de que la imagen cubra el contenedor sin distorsionarse */
+}
+
+@media (max-width: 768px) {
+    .offers {
+        width: 90%; /* Cambiar a un ancho del 90% en pantallas pequeñas */
+        height: auto; /* Ajustar altura automáticamente */
+        margin-left: auto; /* Centrar horizontalmente */
+        margin-right: auto; /* Centrar horizontalmente */
+    }
+
+    .gallery {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar elementos */
+    }
+
+    .carousel {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar los elementos */
+    }
+
+    .carousel-button {
+        width: 100%; /* Hacer que los botones ocupen el ancho completo */
+        margin: 5px 0; /* Espacio vertical entre los botones */
+    }
+}
+
+@media (max-width: 480px) {
+    .offers {
+        width: 100%; /* Cambiar a un ancho del 100% en pantallas muy pequeñas */
+    }
+
+    .desc {
+        font-size: 14px; /* Ajustar el tamaño de fuente para pantallas pequeñas */
+    }
+
+    #more a {
+        font-size: 16px; /* Ajustar el tamaño de fuente del botón */
+        
+    }
+}
+
+
+
+/* Main del history.html*/
+
+.main-history{
+    position: relative;
+    max-width: 100%;
+    text-align: justify;
+    font-size: 30px;
+}
+
+.head{
+    position: absolute;
+    padding: 20px 30px;
+    width: 75%;
+    transform: translate(10%, -85%);
+    color: #022873;
+    background-color: #fff;
+}
+
+.wall{
+    position: relative;
+    padding: 10px 20px;
+    margin-left: 7%;
+    margin-right: 20%;
+    background-color: #fff;
+    max-height: 100%;
+    font-size: 20px;
+}
+
+#sede{
+    width: 70vw;
+    height: 30vh;
+}
+
+
+
+.small{
+    font-size: 12px;
+}
+.titles{
+    color: #022873;
+    margin-left: 3%;
+    font-size: 30px;
+    margin: 30px;
+}
+.lista{
+    margin-left: 5%;
+    margin-bottom: 30px;
+}
