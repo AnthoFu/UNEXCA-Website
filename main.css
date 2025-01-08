@@ -469,33 +469,32 @@ footer .contenido-footer {
     color: var(--blanco);
     display: flex;
     flex-grow: 1;
-    padding-top:40px;
     justify-content: initial;
 }
 
 footer .iconos-footer {
     display: flex;
     flex-direction: column;
-    justify-content: initial;
+    justify-content: center;
     align-items: center;
-    margin: 0 68px;
+    margin: 0 34px;
 }
 
 footer .logo-universidad-footer img {
-    width: 240px;
-    height: 140px;
+    width: 120px;
+    height: 70px;
 }
 
 footer .iconos-redes-footer {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-    width: 240px;
+    width: 120px;
 }
 
 footer .iconos-redes-footer img {
-    height: 40px;
-    width: 40px;
+    height: 20px;
+    width: 20px;
 }
 
 footer .informacion {
@@ -533,7 +532,6 @@ footer .copy {
     font-size: 12px;
     
 }
-
 /************************************************************************/
 
 /* Combinación del archivo de news.css */
