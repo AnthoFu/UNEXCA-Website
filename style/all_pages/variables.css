@@ -1,0 +1,11 @@
+:root {
+    /* Colores */
+    --azul: #022873;
+    --blanco: #fff;
+    --negro: #000;
+    --gris: #343233;
+    
+    /* Fuentes */
+    --fuente-primaria: 'Roboto', sans-serif;
+    --fuente-secundaria: 'Jost', sans-serif;
+}

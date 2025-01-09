@@ -1,0 +1,93 @@
+/* MENU (UTILIZAR ESTA PARTE PARA TODAS LAS PÁGINAS) */
+header {
+    display: flex;
+    justify-content: center;
+    background: url('/assets/fondo-header.png') repeat-x;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.5));
+    position: fixed;
+    width: 100vw;
+    height: 115px;
+    margin-top: -7px;
+    z-index: 9999;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 1366px;
+    padding: 0 68px;
+    margin-top: 7px;
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+    height: 60px;
+    width: 724px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0 28px;
+}
+
+.menu li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 160px;
+    background: var(--azul);
+    text-align: center;
+    overflow: hidden;
+}
+
+.menu li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    top: -60px;
+    left: 0;
+    background-color: var(--blanco);
+    opacity: 0;
+    transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+.menu li:hover::before {
+    top: 0;
+    opacity: 1;
+}
+
+.menu nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: var(--blanco);
+}
+
+.logo-imagen,
+.usuario-logo {
+    height: 60px;
+    padding: 7px 0 0 0;
+}
+
+/* Mostrar el menú por defecto en pantallas grandes */
+nav {
+    display: flex; /* Asegúrate de que el menú esté visible en pantallas grandes */
+}
+
+/* Mostrar el menú hamburguesa en pantallas pequeñas */
+.hamburger {
+    display: none; /* Ocultar el icono de hamburguesa por defecto */
+    font-size: 30px; /* Tamaño del icono de hamburguesa */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el icono */
+}
+

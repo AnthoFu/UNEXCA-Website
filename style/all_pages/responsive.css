@@ -1,0 +1,111 @@
+/* Media Queries para Responsividad */
+@media (max-width: 975px) {
+    .info-inicio-button a {
+        width: 100%;
+    }
+
+    .unexca {
+        font-size: 3.0rem; /* Asegúrate de que este tamaño sea adecuado */
+    }
+
+    .info-inicio-tittle {
+        font-size: 3.6em; /* Asegúrate de que este tamaño sea adecuado */
+    }
+
+    .info-inicio-text {
+        font-size: 24px; /* Ajusta este tamaño según sea necesario */
+        padding: 0 20px; /* Asegúrate de que el padding sea adecuado */
+    }
+
+    .academic-offers .gallery {
+        width: 100%; /* Cambiar a 100% en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+
+    .offers {
+        margin-left: 0; /* Eliminar margen en pantallas pequeñas */
+        width: 100%; /* Cambiar a 100% en pantallas pequeñas */
+    }
+
+    .info {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .article {
+        padding: 70px 20px; /* Ajustar padding en pantallas pequeñas */
+    }
+
+    .box {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        height: auto; /* Ajustar altura */
+    }
+
+    #sample-image {
+        width: 100%; /* Cambiar a 100% en pantallas pequeñas */
+        height: auto; /* Ajustar altura */
+    }
+
+    /* Ajustes adicionales */
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .menu ul {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        width: 100%; /* Asegurarse de que ocupe el ancho completo */
+    }
+
+    .menu li {
+        width: 100%; /* Asegurarse de que cada elemento ocupe el ancho completo */
+    }
+
+    footer .footer {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar elementos */
+    }
+
+    footer .information {
+        text-align: center; /* Centrar texto en pantallas pequeñas */
+        padding: 20px; /* Ajustar padding */
+    }
+
+    .nav {
+        display: none; /* Asegúrate de que el menú esté oculto */
+        flex-direction: column; /* Cambiar a columna */
+        position: absolute; /* Posicionar el menú */
+        top: 60px; /* Ajustar según la altura del header */
+        right: 0; /* Alinear a la derecha */
+        background-color: var(--azul); /* Fondo del menú */
+        width: 100%; /* Ancho completo */
+        z-index: 999; /* Asegurarse de que esté por encima de otros elementos */
+    }
+
+    .nav.active {
+        display: flex; /* Mostrar el menú cuando está activo */
+    }
+
+    .nav ul {
+        list-style-type: none; /* Sin viñetas */
+        padding: 0; /* Sin padding */
+        margin: 0; /* Sin margen */
+    }
+
+    .nav li {
+        text-align: center; /* Centrar texto */
+        padding: 15px 0; /* Espaciado */
+    }
+
+    .nav a {
+        color: var(--blanco); /* Color del texto */
+        text-decoration: none; /* Sin subrayado */
+        font-size: 1.5em; /* Tamaño de fuente */
+    }
+
+    .hamburger {
+        display: block; /* Mostrar el icono de hamburguesa en pantallas pequeñas */
+    }
+}

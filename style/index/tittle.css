@@ -1,0 +1,36 @@
+/* Título de sección */
+.tittle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100px;
+    text-align: center;
+    background: url('/assets/fondo-header2-2-blanco.png') repeat-x;
+}
+.tittle-texto{
+    display: flex;
+    font-size: 48px;
+    font-weight: 500;
+    height: 120px;
+    align-items: end;
+    color: var(--azul);
+}
+.tittle-blanco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100px;
+    text-align: center;
+    background: url('/assets/fondo-header2-2.png') repeat-x;
+    padding-bottom: 15px; /*ESTO ES UNA ESTUPIDEZ PERO NO BORRAR*/
+}
+.tittle-texto-blanco{
+    display: flex;
+    font-size: 48px;
+    font-weight: 500;
+    height: 120px;
+    align-items: end;
+    color: var(--blanco);
+}

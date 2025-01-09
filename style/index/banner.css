@@ -1,0 +1,55 @@
+/* BANNER */
+#banner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    animation: banner 10s infinite linear alternate;
+    position: relative;
+    background-size:100% 100%;
+    background-position: center;
+}
+
+.unexca {
+    font-size: 96px;
+    font-family: var(--fuente-secundaria);
+    position: absolute;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+    color: var(--blanco);
+}
+
+.unexca_boton {
+    background: url('/assets/fondo-header2.png') repeat-x;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.3));
+}
+
+.unexca_boton a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: var(--blanco);
+    padding: 30px;
+}
+
+@keyframes banner {
+    0%, 20% {
+        background-image: url("/assets/banner/banner_altagracia.jpg");
+    }
+    25%, 45% {
+        background-image: url("/assets/banner/banner_floresta.jpg");
+    }
+    50%, 70% {
+        background-image: url("/assets/banner/banner_urbina.jpg");  
+    }
+    75%, 100% {
+        background-image: url("/assets/banner/banner_guaira.jpeg");
+    }
+}

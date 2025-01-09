@@ -1,0 +1,43 @@
+/* Aquí empiezan las ofertas */
+#info-carrera-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul);
+    padding: 40px 68px;
+    cursor: grab;
+}
+.carrera{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--blanco);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+    width: 380px;
+    scroll-snap-align: start;
+    margin: 0 20px;
+}
+.carrera img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carrera-texto{
+    padding: 15px 20px;
+}
+.carrera h3, .carrera p{
+    color: var(--azul);
+    text-align: start;
+}
+.carrera h3, .carrera-link{
+    font-size: 20px;
+}
+.carrera-desc {
+    margin: 9px 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+.carrera a{
+    color: inherit;
+}
