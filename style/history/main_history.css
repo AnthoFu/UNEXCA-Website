@@ -21,13 +21,13 @@
 }
 
 .main-history h1 {
-    font-size: 48px;
+    font-size: 32px;
     color: var(--azul);
     padding: 24px 0 25px 29px;
 }
 
 .main-history p {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 300;
     line-height: 1.4em;
     color: var(--negro);
@@ -49,21 +49,24 @@
 }
 
 .main-history h2 {
-    font-size: 48px;
+    font-size: 30px;
     color: var(--azul);
     margin: 39px 0 39px 29px;
 }
 
 .main-history h3 {
-    font-size: 40px;
+    font-size: 25px;
     color: var(--negro);
     margin: 39px 0 25px 47px;
 }
 
 .main-history .lista {
     color: var(--azul);
-    font-size: 32px;
+    font-size: 20px;
     line-height: 1.3em;
     padding-bottom: 39px;
     padding-left: 58px;
+}
+.main-history .lista li{
+    margin-bottom: 10px;
 }
