@@ -6,7 +6,7 @@
     width: auto;
     height: 100px;
     text-align: center;
-    background: url('/assets/fondo-header2-2-blanco.png') repeat-x;
+    background: url('../../assets/fondo-header2-2-blanco.png') repeat-x;
 }
 .tittle-texto{
     display: flex;
@@ -23,7 +23,7 @@
     width: auto;
     height: 100px;
     text-align: center;
-    background: url('/assets/fondo-header2-2.png') repeat-x;
+    background: url('../../assets/fondo-header2-2.png') repeat-x;
     padding-bottom: 15px; /*ESTO ES UNA ESTUPIDEZ PERO NO BORRAR*/
 }
 .tittle-texto-blanco{

@@ -2,7 +2,7 @@
 header {
     display: flex;
     justify-content: center;
-    background: url('/assets/fondo-header.png') repeat-x;
+    background: url('../../assets/fondo-header.png') repeat-x;
     filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.5));
     position: fixed;
     width: 100vw;

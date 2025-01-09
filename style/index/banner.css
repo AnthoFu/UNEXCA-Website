@@ -8,7 +8,7 @@
     text-align: center;
     animation: banner 10s infinite linear alternate;
     position: relative;
-    background-size:100% 100%;
+    background-size: 100% 100%;
     background-position: center;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .unexca_boton {
-    background: url('/assets/fondo-header2.png') repeat-x;
+    background: url('../../assets/fondo-header2.png') repeat-x;
     height: 60px;
     width: 100%;
     position: absolute;
@@ -41,15 +41,15 @@
 
 @keyframes banner {
     0%, 20% {
-        background-image: url("/assets/banner/banner_altagracia.jpg");
+        background-image: url("../../assets/banner/banner_altagracia.jpg");
     }
     25%, 45% {
-        background-image: url("/assets/banner/banner_floresta.jpg");
+        background-image: url("../../assets/banner/banner_floresta.jpg");
     }
     50%, 70% {
-        background-image: url("/assets/banner/banner_urbina.jpg");  
+        background-image: url("../../assets/banner/banner_urbina.jpg");  
     }
     75%, 100% {
-        background-image: url("/assets/banner/banner_guaira.jpeg");
+        background-image: url("../../assets/banner/banner_guaira.jpeg");
     }
 }

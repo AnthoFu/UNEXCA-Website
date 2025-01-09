@@ -1,26 +1,24 @@
 /* Este es el unico archivo css que se debe implementar en todas las paginas */
 
 /* Importaciones de todas las paginas */
-
-@import url('variables.css');
-@import url('header.css');
-@import url('footer.css');
-@import url(responsive.css);
+@import url('../all_pages/variables.css');
+@import url('../all_pages/header.css');
+@import url('../all_pages/footer.css');
+@import url('../all_pages/responsive.css');
 
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
 /* Importaciones de la pagina Index (inicio) */
-@import url('/style/index/main.css');
-@import url('/style/index/banner.css');
-@import url('/style/index/mapa.css');
-@import url('/style/index/noticias.css');
-@import url('/style/index/ofertas.css');
-@import url('/style/index/tittle.css');
+@import url('../index/main.css');
+@import url('../index/banner.css');
+@import url('../index/mapa.css');
+@import url('../index/noticias.css');
+@import url('../index/ofertas.css');
+@import url('../index/tittle.css');
 
 /* Importaciones de la pagina history */
-@import url('/style/history/main_history.css');
+@import url('../history/main_history.css');
 
 * {
     margin: 0;
