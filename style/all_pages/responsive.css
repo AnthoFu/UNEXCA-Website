@@ -8,18 +8,10 @@
         font-size: 3.0rem; /* Asegúrate de que este tamaño sea adecuado */
     }
 
-    .info-inicio-tittle {
-        font-size: 3.6em; /* Asegúrate de que este tamaño sea adecuado */
-    }
 
     .info-inicio-text {
         font-size: 24px; /* Ajusta este tamaño según sea necesario */
         padding: 0 20px; /* Asegúrate de que el padding sea adecuado */
-    }
-
-    .academic-offers .gallery {
-        width: 100%; /* Cambiar a 100% en pantallas pequeñas */
-        margin-bottom: 20px;
     }
 
     .offers {
@@ -107,5 +99,101 @@
 
     .hamburger {
         display: block; /* Mostrar el icono de hamburguesa en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+
+    .info-inicio-tittle{
+        padding-top: 20px;
+    }
+
+    .tittle-texto-blanco{
+        font-size: 35px;
+    }
+
+    .tittle-texto {
+    font-size: 35px;
+    align-items: center;
+    }
+
+    .mapa-sedes{
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .fotos-sedes{
+        flex-direction: row;
+    }
+
+    .foto-sede{
+        width: 33%;
+        height: 50vh;
+    }
+
+    .mapa-container{
+        width: 90%;
+    }
+
+
+    /* Pagina history */
+    .main-history{
+        margin: 0px;
+}
+}
+
+
+
+
+@media (max-width: 480px) {
+
+
+    .info-inicio{
+        gap: 0px;
+    }
+
+    .info-inicio-tittle{
+        padding-top: 0px;
+    }
+
+    .info-inicio-text{
+        font-size: 18px;
+    }
+
+    footer .iconos-footer{
+        margin: 0 10px;
+    }
+    
+    footer .informacion {
+        padding-right: 10px;
+    }
+
+    footer .informacion ul li a {
+        font-size: 12px;
+    }
+
+    footer .informacion h3{
+        font-size: 14px;
+    }
+
+
+    /* Pagina historia */
+    .main-history h1, .main-history h2, .main-history h3{
+        padding: 15px 0 10px 15px;
+        margin: 0px;
+    }
+
+    .main-history p{
+        font-size: 14px;
+        margin: 0 0 16px 14px;
+    }
+
+    .main-history .small {
+        margin-bottom: 14px;
+    }
+
+
+    .main-history .lista {
+        font-size: 16px;
     }
 }
