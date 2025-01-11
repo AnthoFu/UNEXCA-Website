@@ -1,0 +1,49 @@
+/**************Plantilla de pagina de carreras***************/
+
+.PNF{
+    padding: 10% 0% 4% 5%;
+    text-align: justify;
+}
+.return a {
+    color: #000;
+}
+.return a:hover{
+    color: #022873;
+}
+#arrow{
+    height: 20px;
+    width: 20px;
+}
+.title{
+    color: #022873;
+    padding: 5% 0% 4% 0%;
+    font-size: 40px; 
+}
+.career {
+    display: flex;
+}
+/*Texto aqui*/
+.desc{
+    flex: 2;
+    font-size: 25px;
+}
+/*Iconos aqui*/
+.info {
+    flex: 1;
+    color: #022873;
+    padding: 0% 0% 0% 10%;
+    font-size: 15px;
+}
+.info a {
+    text-decoration: none;
+    color: #022873;
+}
+#icons{
+    float: left;
+    height: 50px;
+    width: 45px;
+    margin-right: 5%;
+}
+#space{
+    margin-bottom: 10%;
+}
