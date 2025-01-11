@@ -20,6 +20,11 @@
 /* Importaciones de la pagina history */
 @import url('../history/main_history.css');
 
+
+
+/* Importaciones de la pagina de plantillas de los pnf*/
+@import url('../plantillas_pnf/main_plantillas.css');
+
 * {
     margin: 0;
     padding: 0;
