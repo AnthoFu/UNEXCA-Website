@@ -9,11 +9,42 @@ hamburger.addEventListener('click', () => {
 
 //SLIDER DE PROGRAMAS ACADEMICOS
 $('.slider-nav').slick({
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     autoplay: true,
     autoplaySpeed: 1500,
+    infinite: true,
     arrows : false,
+      responsive: [
+    {    
+      breakpoint: 1366,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      }
+    },
+    {    
+      breakpoint: 975,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });
 
 //INTERACTIVIDAD DE LAS UBICACIONES DEL MAPA
